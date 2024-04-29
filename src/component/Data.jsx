@@ -10,7 +10,7 @@ function Data() {
     const [hasMore, setHasMore] = useState(true);
 
     useEffect(() => {
-        fetch(`http://api.sampleapis.com/codingresources/codingResources`)
+        fetch(`https://api.sampleapis.com/codingresources/codingResources`)
           .then((res) => res.json())
           .then((data) => {
             const limitedItems = data.slice(0, limit);
@@ -24,7 +24,7 @@ function Data() {
         setTimeout(() => {
           const newLimit = limit + 20;
           setLimit(newLimit);
-          fetch(`http://api.sampleapis.com/codingresources/codingResources`)
+          fetch(`https://api.sampleapis.com/codingresources/codingResources`)
             .then((res) => res.json())
             .then((data) => {
               const limitedItems = data.slice(0, newLimit);
